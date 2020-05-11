@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Lising
+from .models import Listing
 
 class ListingAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'is_published', 'price', 'list_date', 'realtor')
@@ -10,4 +10,4 @@ class ListingAdmin(admin.ModelAdmin):
     search_fields= ('title', 'description', 'address', 'city', 'state', 'zipcode', 'price')
 
 
-admin.site.register(Lising, ListingAdmin)
+admin.site.register(Listing, ListingAdmin)

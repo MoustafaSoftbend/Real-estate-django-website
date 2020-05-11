@@ -2,7 +2,7 @@ from django.db import models
 from datetime import datetime
 from realters.models import Realtor
 
-class Lising(models.Model):
+class Listing(models.Model):
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     adress = models.CharField(max_length=200)
@@ -11,7 +11,7 @@ class Lising(models.Model):
     zipcode = models.CharField(max_length=20)
     description = models.TextField(blank=True)
     price = models.IntegerField()
-    debrooms = models.IntegerField()
+    bedrooms = models.IntegerField()
     bathroom = models.DecimalField(max_digits=2, decimal_places=1)
     garage = models.IntegerField(default=0)
     sqft = models.IntegerField()
